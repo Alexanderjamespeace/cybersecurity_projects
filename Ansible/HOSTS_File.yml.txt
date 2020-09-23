@@ -1,0 +1,57 @@
+# Below I have included my default Ansible file for our Hosts.
+# I have also included extensive details and examples for reference.
+#
+# Our Ansible Host's file may be accessed in /etc/ansible/hosts
+# Here are 5. factors to keep in mind:
+#   1. Comments here share a '#' character to the left
+#   
+#   2. Spaces such as the previous one are ignored
+#   3. Specific sets of hosts include the delimitor [header] in their elements
+#   4. By entering ip addresses or the specified Host name one can effectively find them
+#   5. A IP address(s) and Hosts can be effectively exist as members of multiple groups/sets
+
+# To show an examples of ungrouped hosts, specify before any group headers.
+
+##
+## 192.168.100.10
+## blue.example.com
+## green.example.com
+## 192.168.100.1
+## 
+
+# Secondly, I show collections of hosts belonging to the 'webservers' group
+
+[webservers] ## Here we see our first example of our '[]' delimitor around our group
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+
+## Below is the primary & secondary IP configuration for our Azure Network Interface
+AzureUser@10.0.0.12 ansible_python_interpreter=/usr/bin/python3
+AzureUser@10.0.0.9 ansible_python_interpreter=/usr/bin/python3
+AzureUser@10.0.0.13 ansible_python_interpreter=/usr/bin/python3
+
+[elk] ## Network is as follows:
+AzureUser@10.2.0.4 python_interpreter=/usr/bin/python3
+
+
+# Note to keep in mind that multiple hosts following a pattern should look like the following:
+
+## www[001:006].example.com
+
+# Lastly, our collection of database servers in our dbservers group
+# Which again includes our '[]' delimination
+
+## [dbservers]
+## 10.25.1.56
+## 10.25.1.57
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+## 
+##
+
+# A final example of host ranges minus the '00's in front of our range
+
+## db-[95:115]-node.example.com
+## END
