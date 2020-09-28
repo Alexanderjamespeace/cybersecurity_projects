@@ -1,3 +1,5 @@
+## ALEXANDER PEACE
+
 # cybersecurity_projects
 Repository For CyberSecurity School
 ## Automated ELK Stack Deployment
@@ -6,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![image](https://user-images.githubusercontent.com/50026505/94481447-f14bdb00-0194-11eb-9e22-791b47448d3d.png)
 
-<img src="Diagrams/Week 12 Diagram.png">
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 - [Setup Webserver Operating System](Ansible/Pentest.yml.txt)
@@ -49,6 +51,14 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 ### Access Policies
 
+The VMs on the internal network are not accessable from the public internet.
+Only the Jumpbox VM accepts connections from the internet and only from specified IPs.
+The Current configuration for set for the jumpbox to only accept the users home IP address.
+Machines in the network are accessed only through the jumpbox.
+A screeshot of the access policies are linked here:
+
+![Images_FirwallRuleScreenshot](https://user-images.githubusercontent.com/50026505/94484794-3a525e00-019a-11eb-9c45-04aa91de2cef.JPG)
+
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBoxProvisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
@@ -81,10 +91,19 @@ The playbook implements the following tasks:
 - Increase virtaul memory automatically when Elk is booted
 - Download and Launch a docker container for Elk
 - Enable the docker container created
-<img src="Diagrams/Elk-Container-Setup.PNG">
+
+![image](https://user-images.githubusercontent.com/50026505/94483863-c6638600-0198-11eb-9b27-5df24d7551d5.png)
+
+The Second image is part of the first:
+
+![image](https://user-images.githubusercontent.com/50026505/94483883-cfecee00-0198-11eb-8a75-8960d23302eb.png)
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-<img src="Diagrams/Docker-Containers-in-Elk.PNG">
+
+![image](https://user-images.githubusercontent.com/50026505/94483939-e430eb00-0198-11eb-8da9-a58c1b0ac667.png)
+
+![image](https://user-images.githubusercontent.com/50026505/94483953-e98e3580-0198-11eb-9138-f4fdf725447e.png)
 
 ### Target Machines & Beats
 
@@ -118,3 +137,8 @@ To setup Filebeat:
 - Exit and save the configuration file
 - Create a new .yml file (example FilebeatInstall.yml)
 - After the filebeat playbook is played run ansible-playbook 'name-of-your-file.yml'
+
+
+THE END
+
+## END ##
