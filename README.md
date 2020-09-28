@@ -11,11 +11,11 @@ The files in this repository were used to configure the network depicted below.
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
-- [Setup Webserver Operating System](Ansible/Pentest.yml.txt)
-- [Configure Filebeat hosts](Filebeat/Filebeat-Configuration.yml)
-- [Install FileBeat](Filebeat/Filebeatsetup.yml)
-- [Configure Hosts to Run Ansible](Ansible/Hosts.yml.txt)
-- [Install Elk Container](Elk/Install_Elk.yml.txt)
+- [Setup Webserver Operating System](Ansible/Pentesting.yml.txt)
+- [Configure Filebeat hosts](Filebeat/Filebeat_Configure_Installation.yml.txt)
+- [Install FileBeat](Filebeat/Setup_Filebeat.yml.txt
+- [Configure Hosts to Run Ansible](Ansible/HOSTS_File.yml.txt)
+- [Install Elk Container](Elk/ELK_Configure_Installation.yml.txt)
   
 
 This document contains the following details:
@@ -40,7 +40,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat will monitor metrics and measure statistics from the server periodically and output them into a report. 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -76,7 +76,7 @@ A summary of the access policies in place can be found in the table below.
                                                      
 
 ### Elk Configuration
-
+(ELK/ELK_Configure_Installation.yml.txt)
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - You can set up the Elk Container without being inside the Elk Stack. 
 - It makes management of the Elk Stack Operating System easier (Easier to update remotely). 
